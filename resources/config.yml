@@ -1,0 +1,15 @@
+---
+# config.yml
+# You can see the list of sound effects at this link: https://www.digminecraft.com/lists/sound_list_pe.php
+# Player Death
+death:
+  sound: "random.explode" # Sound name
+  volume: 1 # Volume sounds
+  pitch: 1 # Pitch sounds
+
+# Player Kills
+kill:
+  sound: "random.levelup" # Sound name
+  volume: 1 # Volume sounds
+  pitch: 1 # Pitch sounds
+...
