@@ -22,13 +22,13 @@ class KillDeathSound extends PluginBase implements Listener {
 	public function onDeath(PlayerDeathEvent $ev){
 		$player = $ev->getPlayer();
 		if($player instanceof Player){
-			$this->PlaySound($player, $this->config["death"]["sound"], $this->config["death"]["volume"], $this->config["death"]["pitch"]);
+			$this->PlaySound($player, $this->getConfig()->getAll()["death"]["sound"], $this->getConfig()->getAll()["death"]["volume"], $this->getConfig()->getAll()["death"]["pitch"]);
 		}
 		$cause = $player->getLastDamageCause();
 		if($cause instanceof EntityDamageByEntityEvent){
 			$damager = $cause->getDamager();
 			if($damager instanceof Player){
-				$this->PlaySound($player, $this->config["kill"]["sound"], $this->config["kill"]["volume"], $this->config["kill"]["pitch"]);
+				$this->PlaySound($player, $this->getConfig()->getAll()["kill"]["sound"], $this->getConfig()->getAll()["kill"]["volume"], $this->getConfig()->getAll()["kill"]["pitch"]);
 			}
 		}
 	}
