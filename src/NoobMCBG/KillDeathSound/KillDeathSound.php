@@ -10,6 +10,7 @@ use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
 class KillDeathSound extends PluginBase implements Listener {
         
