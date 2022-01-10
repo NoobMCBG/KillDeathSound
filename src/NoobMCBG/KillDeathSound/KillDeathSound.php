@@ -12,7 +12,10 @@ use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 
 class KillDeathSound extends PluginBase implements Listener {
-
+	
+	/** @var Config */
+	private $config;
+        
 	public function onEnable() : void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
