@@ -17,7 +17,12 @@ class KillDeathSound extends PluginBase implements Listener {
 	public function onEnable() : void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
+		$this->checkUpdate();
 	}
+	
+	public function checkUpdate(bool $isRetry = false): void {
+            $this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
+        }
 
 	public function onDeath(PlayerDeathEvent $ev){
 		$player = $ev->getPlayer();
