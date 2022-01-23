@@ -3,6 +3,9 @@
 </div>
 <p align="center">
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.state/KillDeathSound"></a>
+<a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.api/KillDeathSound"></a>
+<a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.dl.total/KillDeathSound"></a>
+<a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.dl/KillDeathSound"></a>
 <br>
 ✔️ When the player is killed and dies, the sound will work ✔️
 </p>
