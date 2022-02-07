@@ -8,7 +8,23 @@
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.dl/KillDeathSound"></a>
 <br>
 ✔️ When the player is killed and dies, the sound will work ✔️
+<br>
+✔️ Can be set to work or not ✔️
+<br>
+✔️ added sound when hitting or archery hits the enemy ✔️
+<br>
+✔️ Can access to KillDeathSound ✔️
+<br>
+❌ Effect on killing or dying ❌
 </p>
+
+## Update
+| **Update** | **State**|
+| --- | --- |
+| **Can be set to work or not** | **✔️**|
+| **added sound when hitting or archery hits the enemy** | **✔️**|
+| **Can access to KillDeathSound** | **✔️**|
+| **Effect on killing or dying** | **❌**|
 
 <br>
 
@@ -52,13 +68,6 @@ hit:
   pitch: 1 # Pitch sounds
 ...
 ```
-
-<br>
-
-## New
-- Can be set to work or not
-- added sound when hitting or archery hits the enemy
-- Can access to KillDeathSound
 
 <br>
 
