@@ -18,7 +18,7 @@
 <br>
 
 ## ✍ Config
-```
+```yaml
 ---
 # config.yml
 # You can see the list of sound effects at this link: https://www.digminecraft.com/lists/sound_list_pe.php
