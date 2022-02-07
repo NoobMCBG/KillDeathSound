@@ -63,7 +63,7 @@ hit:
 <br>
 
 ## For Developer
-- You can access to KillDeathSound by using ```php KillDeathSound::getInstance() ```
+- You can access to KillDeathSound by using ```KillDeathSound::getInstance()```
 - Add sound usage:
 ```php
 $player = $event->getPlayer();
