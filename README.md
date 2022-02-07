@@ -9,7 +9,7 @@
 <br>
 ✔️ When the player is killed and dies, the sound will work ✔️
 <br>
-  ![Screenshot](https://user-images.githubusercontent.com/84442886/152750010-64841d5f-df00-475c-acd7-7b7588284e6f.png)
+  ![icon](https://user-images.githubusercontent.com/84442886/152750102-619f6f95-1e6d-4982-90a8-438e4173af72.png)
 <br>
 ✔️ Can be set to work or not ✔️
 <br>
