@@ -58,7 +58,21 @@ hit:
 ## New
 - Can be set to work or not
 - added sound when hitting or archery hits the enemy
+- Can access to KillDeathSound
 
+<br>
+
+## For Developer
+- You can access to KillDeathSound by using `php KillDeathSound::getInstance() `
+- Add sound usage:
+```php
+$player = $event->getPlayer();
+$soundName = "random.explode";
+$volume = 1;
+$pitch = 1;
+KillDeathSound::getInstance()->PlaySound($player, $soundName, $volume, $pitch);
+```
+  
 <br>
 
 ## Install
