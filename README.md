@@ -9,6 +9,8 @@
 <br>
 ✔️ When the player is killed and dies, the sound will work ✔️
 <br>
+  ![Screenshot](https://user-images.githubusercontent.com/84442886/152750010-64841d5f-df00-475c-acd7-7b7588284e6f.png)
+<br>
 ✔️ Can be set to work or not ✔️
 <br>
 ✔️ added sound when hitting or archery hits the enemy ✔️
