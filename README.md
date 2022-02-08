@@ -9,7 +9,7 @@
 <br>
 ✔️ When the player is killed and dies, the sound will work ✔️
 <br>
-<img src="https://github.com/NoobMCBG/KillDeathSound/blob/main/icon.png" />
+<img src="https://github.com/NoobMCBG/KillDeathSound/blob/main/icon.png"/>
 <br>
 ✔️ Can be set to work or not ✔️
 <br>
