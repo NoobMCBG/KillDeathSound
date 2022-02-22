@@ -24,22 +24,7 @@ kill:
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
   particle: # Particle death
-    addparticle: true # AddParticle mode
-    heart: true
-    ink: false
-    lava: false
-    angryvillager: false
-    endermanteleport: false
-    critical: false
-    explode: false
-    happyvillager: false
-    portal: false
-    redstone: false
-    snowballpoof: false
-    smoke: false
-    waterdrip: false
-    height: 0 # Effect height
-    width: 1 # Effect width
+  
 # Player Hit & Archery
 hit:
   addsound: true
