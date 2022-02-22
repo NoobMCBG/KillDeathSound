@@ -38,6 +38,8 @@ kill:
     snowballpoof: false
     smoke: false
     waterdrip: false
+    height: 0 # Effect height
+    width: 1 # Effect width
 # Player Hit & Archery
 hit:
   addsound: true
