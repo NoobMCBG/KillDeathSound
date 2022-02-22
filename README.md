@@ -16,8 +16,6 @@
 ✔️ added sound when hitting or archery hits the enemy ✔️
 <br>
 ✔️ Can access to KillDeathSound ✔️
-<br>
-❌ Effect on killing or dying ❌
 </p>
 
 ## Update
@@ -26,7 +24,6 @@
 | **Can be set to work or not** | **✔️**|
 | **added sound when hitting or archery hits the enemy** | **✔️**|
 | **Can access to KillDeathSound** | **✔️**|
-| **Effect on killing or dying** | **❌**|
 
 <br>
 
@@ -62,6 +59,7 @@ kill:
   sound: "random.levelup" # Sound name
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
+  
 # Player Hit & Archery
 hit:
   addsound: true
@@ -87,6 +85,6 @@ KillDeathSound::getInstance()->PlaySound($player, $soundName, $volume, $pitch);
 <br>
 
 ## Install
-- Step 1: Click the "Direct Download" button to download the plugin
-- Step 2: move the file "KillDeathSound.phar" into the file "plugins"
+- Step 1: Click the `Direct Download` button to download the plugin
+- Step 2: move the file `KillDeathSound.phar` into the file `plugins`
 - Step 3: Restart server for plugins to work
