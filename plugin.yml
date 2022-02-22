@@ -1,6 +1,6 @@
 name: KillDeathSound
 main: NoobMCBG\KillDeathSound\KillDeathSound
 api: 4.0.0
-version: 2.0.0
+version: 3.0.0
 author: NoobMCBG
 description: When the player is killed and dies, the sound will work
