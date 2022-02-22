@@ -13,7 +13,7 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
 class KillDeathSound extends PluginBase implements Listener {
     
-    /** @var KillDeathSound */
+        /** @var KillDeathSound */
 	public static $instance;
 
 	public static function getInstance() : self {
@@ -28,15 +28,15 @@ class KillDeathSound extends PluginBase implements Listener {
 	}
 	
 	/** 
-    * @param bool $isRetry = false
+        * @param bool $isRetry = false
 	*/
 	public function checkUpdate(bool $isRetry = false): void {
             $this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
         }
     
-    /**
-    * @param PlayerDeathEvent $event
-    */
+       /**
+       * @param PlayerDeathEvent $event
+       */
 	public function onDeath(PlayerDeathEvent $event){
 		$player = $event->getPlayer();
 		if($player instanceof Player){
@@ -44,7 +44,76 @@ class KillDeathSound extends PluginBase implements Listener {
 			    $soundName = $this->getConfig()->getAll()["death"]["sound"];
 			    $volume = $this->getConfig()->getAll()["death"]["volume"];
 			    $pitch = $this->getConfig()->getAll()["death"]["pitch"];
-			    $this->PlaySound($player, $soundName, $volume, $pitch);
+			    $this->playSound($player, $soundName, $volume, $pitch);
+			}
+			if($this->getConfig()->getAll()["death"]["particle"] == true){
+				if($this->getConfig()->getAll()["death"]["particle"]["addparticle"] == true){
+					if($this->getConfig()->getAll()["death"]["particle"]["heart"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new HeartParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["ink"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new InkParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["lava"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new LavaParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["angryvillager"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new AngryVillagerParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["endermanteleport"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new EndermanTeleportParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["critical"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new CriticalParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["explode"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new ExplodeParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["happyvillager"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new HappyVillagerParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["portal"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new PortalParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["redstone"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new RedstoneParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["snowballpoof"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new SnowballPoofParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["smoke"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new SmokeParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+					if($this->getConfig()->getAll()["death"]["particle"]["waterdrip"] == true){
+					        $pos = $player->getPosition();
+		    			        $particle = new WaterDripParticle($pos);
+		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+					}
+				}
 			}
 		}
 		$cause = $player->getLastDamageCause();
@@ -55,43 +124,43 @@ class KillDeathSound extends PluginBase implements Listener {
 				    $soundName = $this->getConfig()->getAll()["kill"]["sound"];
 			        $volume = $this->getConfig()->getAll()["kill"]["volume"];
 			        $pitch = $this->getConfig()->getAll()["kill"]["pitch"];
-				    $this->PlaySound($player, $soundName, $volume, $pitch);
+				    $this->playSound($player, $soundName, $volume, $pitch);
 				}
 			}
 		}
 	}
     
-    /**
-    * @param EntityDamageByEntityEvent $event
-    */
+        /**
+        * @param EntityDamageByEntityEvent $event
+        */
 	public function onHit(EntityDamageByEntityEvent $event){
 		$attacker = $event->getDamager();
 		$entity = $event->getEntity();
 		if($attacker instanceof Player){
 			if($this->getConfig()->getAll()["hit"]["addsound"] == true){
-		        $soundName = $this->getConfig()->getAll()["hit"]["sound"];
+		            $soundName = $this->getConfig()->getAll()["hit"]["sound"];
 			    $volume = $this->getConfig()->getAll()["hit"]["volume"];
 			    $pitch = $this->getConfig()->getAll()["hit"]["pitch"];
-                $this->PlaySound($attacker, $soundName, $volume, $pitch);
-            }
+                            $this->playSound($attacker, $soundName, $volume, $pitch);
+                        }
 		}
 		if($entity instanceof Player){
 			if($this->getConfig()->getAll()["hit"]["addsound"] == true){
 			    $soundName = $this->getConfig()->getAll()["hit"]["sound"];
 			    $volume = $this->getConfig()->getAll()["hit"]["volume"];
 			    $pitch = $this->getConfig()->getAll()["hit"]["pitch"];
-                $this->PlaySound($entity, $soundName, $volume, $pitch);
-            }
+                            $this->playSound($entity, $soundName, $volume, $pitch);
+                        }
 		}
 	}
     
-    /**
-    * @param Player $player
-    * @param string $soundName
-    * @param float $volume = 0
-    * @param float $pitch = 0
-    */
-	public function PlaySound(Player $player, string $soundName, float $volume = 0, float $pitch = 0) : void {
+        /**
+        * @param Player $player
+        * @param string $soundName
+        * @param float $volume = 0
+        * @param float $pitch = 0
+        */
+	public function playSound(Player $player, string $soundName, float $volume = 0, float $pitch = 0) : void {
 		$packet = new PlaySoundPacket();
 		$packet->soundName = $soundName;
 		$packet->x = $player->getPosition()->getX();
