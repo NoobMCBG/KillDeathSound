@@ -10,19 +10,6 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
-use pocketmine\world\particle\HeartParticle; 
-use pocketmine\world\particle\InkParticle;
-use pocketmine\world\particle\LavaParticle;
-use pocketmine\world\particle\AngryVillagerParticle;
-use pocketmine\world\particle\EndermanTeleportParticle;
-use pocketmine\world\particle\CriticalParticle;
-use pocketmine\world\particle\ExplodeParticle;
-use pocketmine\world\particle\HappyVillagerParticle;
-use pocketmine\world\particle\PortalParticle;
-use pocketmine\world\particle\RedstoneParticle;
-use pocketmine\world\particle\SnowballPoofParticle;
-use pocketmine\world\particle\SmokeParticle;
-use pocketmine\world\particle\WaterDripParticle;
 
 class KillDeathSound extends PluginBase implements Listener {
     
@@ -58,101 +45,6 @@ class KillDeathSound extends PluginBase implements Listener {
 			    $volume = $this->getConfig()->getAll()["death"]["volume"];
 			    $pitch = $this->getConfig()->getAll()["death"]["pitch"];
 			    $this->playSound($player, $soundName, $volume, $pitch);
-			}
-			if($this->getConfig()->getAll()["death"]["particle"] == true){
-				if($this->getConfig()->getAll()["death"]["particle"]["addparticle"] == true){
-					if($this->getConfig()->getAll()["death"]["particle"]["heart"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new HeartParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["ink"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new InkParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["lava"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new LavaParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["angryvillager"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new AngryVillagerParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["endermanteleport"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new EndermanTeleportParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["critical"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new CriticalParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["explode"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new ExplodeParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["happyvillager"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new HappyVillagerParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["portal"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new PortalParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["redstone"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new RedstoneParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["snowballpoof"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new SnowballPoofParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["smoke"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new SmokeParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-					if($this->getConfig()->getAll()["death"]["particle"]["waterdrip"] == true){
-						do {
-					                $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
-		    			                $particle = new WaterDripParticle($vector);
-		    			                $player->getPosition()->getWorld()->addParticle($vector, $particle);
-						}while(false);
-					}
-				}
 			}
 		}
 		$cause = $player->getLastDamageCause();
