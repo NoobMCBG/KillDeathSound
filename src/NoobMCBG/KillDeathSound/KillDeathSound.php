@@ -34,9 +34,9 @@ class KillDeathSound extends PluginBase implements Listener {
             $this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
         }
     
-       /**
-       * @param PlayerDeathEvent $event
-       */
+        /**
+        * @param PlayerDeathEvent $event
+        */
 	public function onDeath(PlayerDeathEvent $event){
 		$player = $event->getPlayer();
 		if($player instanceof Player){
