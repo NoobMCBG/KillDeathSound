@@ -10,6 +10,19 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
+use pocketmine\world\particle\HeartParticle; 
+use pocketmine\world\particle\InkParticle;
+use pocketmine\world\particle\LavaParticle;
+use pocketmine\world\particle\AngryVillagerParticle;
+use pocketmine\world\particle\EndermanTeleportParticle;
+use pocketmine\world\particle\CriticalParticle;
+use pocketmine\world\particle\ExplodeParticle;
+use pocketmine\world\particle\HappyVillagerParticle;
+use pocketmine\world\particle\PortalParticle;
+use pocketmine\world\particle\RedstoneParticle;
+use pocketmine\world\particle\SnowballPoofParticle;
+use pocketmine\world\particle\SmokeParticle;
+use pocketmine\world\particle\WaterDripParticle;
 
 class KillDeathSound extends PluginBase implements Listener {
     
