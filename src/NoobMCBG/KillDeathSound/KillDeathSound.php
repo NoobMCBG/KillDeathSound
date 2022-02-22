@@ -122,8 +122,8 @@ class KillDeathSound extends PluginBase implements Listener {
 			if($damager instanceof Player){
 				if($this->getConfig()->getAll()["kill"]["addsound"] == true){
 				    $soundName = $this->getConfig()->getAll()["kill"]["sound"];
-			        $volume = $this->getConfig()->getAll()["kill"]["volume"];
-			        $pitch = $this->getConfig()->getAll()["kill"]["pitch"];
+			            $volume = $this->getConfig()->getAll()["kill"]["volume"];
+			            $pitch = $this->getConfig()->getAll()["kill"]["pitch"];
 				    $this->playSound($player, $soundName, $volume, $pitch);
 				}
 			}
