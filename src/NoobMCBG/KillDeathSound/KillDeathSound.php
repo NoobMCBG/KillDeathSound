@@ -94,7 +94,7 @@ class KillDeathSound extends PluginBase implements Listener {
 					if($this->getConfig()->getAll()["death"]["particle"]["explode"] == true){
 					        $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
 		    			        $particle = new ExplodeParticle($vector);
-		    			        $player->getPosition()->getWorld()->addParticle($pos, $particle);
+		    			        $player->getPosition()->getWorld()->addParticle($vector, $particle);
 					}
 					if($this->getConfig()->getAll()["death"]["particle"]["happyvillager"] == true){
 					        $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
@@ -117,7 +117,7 @@ class KillDeathSound extends PluginBase implements Listener {
 		    			        $player->getPosition()->getWorld()->addParticle($vector, $particle);
 					}
 					if($this->getConfig()->getAll()["death"]["particle"]["smoke"] == true){
-					        $pos = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
+					        $vector = $player->getPosition()->add($this->getConfig()->getAll()["death"]["particle"]["width"], $this->getConfig()->getAll()["death"]["particle"]["height"], $this->getConfig()->getAll()["death"]["particle"]["width"]);;
 		    			        $particle = new SmokeParticle($vector);
 		    			        $player->getPosition()->getWorld()->addParticle($vector, $particle);
 					}
