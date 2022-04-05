@@ -82,7 +82,7 @@ class KillDeathSound extends PluginBase implements Listener {
 			    	$volume = $this->getConfig()->getAll()["hit"]["volume"];
 			    	$pitch = $this->getConfig()->getAll()["hit"]["pitch"];
                             	foreach($this->getConfig()->getAll()["hit"]["sound"] as $soundName){
-			    		$this->playSound($damager, $soundName, $volume, $pitch);
+			    		$this->playSound($attacker, $soundName, $volume, $pitch);
 				}
 				if($this->getConfig()->getAll()["hit"]["blood"] == true){
 					$attacker->getWorld()->addParticle($attacker->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
