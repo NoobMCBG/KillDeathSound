@@ -13,14 +13,19 @@
 # Player Death
 death:
   addsound: true
-  sound: "random.explode" # Sound name
+  blood: true
+  sound: # Sound name
+  - "random.explode"
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
 
 # Player Kills
 kill:
   addsound: true
-  sound: "random.levelup" # Sound name
+  blood: true
+  sound: # Sound name
+  - "random.levelup"
+  - "random.totem"
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
   particle: # Particle death
@@ -28,7 +33,9 @@ kill:
 # Player Hit & Archery
 hit:
   addsound: true
-  sound: "random.orb" # Sound name
+  blood: true
+  sound: # Sound name
+  - "random.orb"
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
 ...
