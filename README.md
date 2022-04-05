@@ -32,9 +32,9 @@
 <br>
 
 ## Features
-- When the player is killed and dies, the sound will work
-- Generates blood particles when killed, killed, punched, and hit by archery
-- added sound when hitting or archery hits the enemy
+>- When the player is killed and dies, the sound will work
+>- Generates blood particles when killed, killed, punched, and hit by archery
+>- added sound when hitting or archery hits the enemy
   
 <br>
 
@@ -86,8 +86,8 @@ hit:
 <br>
 
 ## For Developer
-- You can access to KillDeathSound by using ```KillDeathSound::getInstance()```
-- Add sound usage:
+>- You can access to KillDeathSound by using ```KillDeathSound::getInstance()```
+>- Add sound usage:
 ```php
 $player = $event->getPlayer();
 $soundName = "random.explode";
@@ -99,6 +99,6 @@ KillDeathSound::getInstance()->PlaySound($player, $soundName, $volume, $pitch);
 <br>
 
 ## Install
-- Step 1: Click the `Direct Download` button to download the plugin
-- Step 2: move the file `KillDeathSound.phar` into the file `plugins`
-- Step 3: Restart server for plugins to work
+>- Step 1: Click the `Direct Download` button to download the plugin
+>- Step 2: move the file `KillDeathSound.phar` into the file `plugins`
+>- Step 3: Restart server for plugins to work
