@@ -8,6 +8,7 @@ use pocketmine\player\Player;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerDeathEvent;
+use pocketmine\world\particle\BlockBreakParticle;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
@@ -41,10 +42,13 @@ class KillDeathSound extends PluginBase implements Listener {
 		$player = $event->getPlayer();
 		if($player instanceof Player){
 			if($this->getConfig()->getAll()["death"]["addsound"] == true){
-			    $soundName = $this->getConfig()->getAll()["death"]["sound"];
-			    $volume = $this->getConfig()->getAll()["death"]["volume"];
-			    $pitch = $this->getConfig()->getAll()["death"]["pitch"];
-			    $this->playSound($player, $soundName, $volume, $pitch);
+			    	$soundName = $this->getConfig()->getAll()["death"]["sound"];
+			    	$volume = $this->getConfig()->getAll()["death"]["volume"];
+			    	$pitch = $this->getConfig()->getAll()["death"]["pitch"];
+			    	$this->playSound($player, $soundName, $volume, $pitch);
+			        if($this->getConfig()->getAll()["death"]["blood"] == true){
+					$player->getWorld()->addParticle($player->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
+				}
 			}
 		}
 		$cause = $player->getLastDamageCause();
@@ -52,10 +56,13 @@ class KillDeathSound extends PluginBase implements Listener {
 			$damager = $cause->getDamager();
 			if($damager instanceof Player){
 				if($this->getConfig()->getAll()["kill"]["addsound"] == true){
-				    $soundName = $this->getConfig()->getAll()["kill"]["sound"];
-			            $volume = $this->getConfig()->getAll()["kill"]["volume"];
-			            $pitch = $this->getConfig()->getAll()["kill"]["pitch"];
-				    $this->playSound($player, $soundName, $volume, $pitch);
+				    	$soundName = $this->getConfig()->getAll()["kill"]["sound"];
+			            	$volume = $this->getConfig()->getAll()["kill"]["volume"];
+			            	$pitch = $this->getConfig()->getAll()["kill"]["pitch"];
+				   	$this->playSound($damager, $soundName, $volume, $pitch);
+				    	if($this->getConfig()->getAll()["kill"]["blood"] == true){
+						$damager->getWorld()->addParticle($damager->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
+					}
 				}
 			}
 		}
@@ -69,18 +76,24 @@ class KillDeathSound extends PluginBase implements Listener {
 		$entity = $event->getEntity();
 		if($attacker instanceof Player){
 			if($this->getConfig()->getAll()["hit"]["addsound"] == true){
-		            $soundName = $this->getConfig()->getAll()["hit"]["sound"];
-			    $volume = $this->getConfig()->getAll()["hit"]["volume"];
-			    $pitch = $this->getConfig()->getAll()["hit"]["pitch"];
-                            $this->playSound($attacker, $soundName, $volume, $pitch);
+		            	$soundName = $this->getConfig()->getAll()["hit"]["sound"];
+			    	$volume = $this->getConfig()->getAll()["hit"]["volume"];
+			    	$pitch = $this->getConfig()->getAll()["hit"]["pitch"];
+                            	$this->playSound($attacker, $soundName, $volume, $pitch);
+				if($this->getConfig()->getAll()["hit"]["blood"] == true){
+					$attacker->getWorld()->addParticle($attacker->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
+				}
                         }
 		}
 		if($entity instanceof Player){
 			if($this->getConfig()->getAll()["hit"]["addsound"] == true){
-			    $soundName = $this->getConfig()->getAll()["hit"]["sound"];
-			    $volume = $this->getConfig()->getAll()["hit"]["volume"];
-			    $pitch = $this->getConfig()->getAll()["hit"]["pitch"];
-                            $this->playSound($entity, $soundName, $volume, $pitch);
+			    	$soundName = $this->getConfig()->getAll()["hit"]["sound"];
+			    	$volume = $this->getConfig()->getAll()["hit"]["volume"];
+			    	$pitch = $this->getConfig()->getAll()["hit"]["pitch"];
+                            	$this->playSound($entity, $soundName, $volume, $pitch);
+				if($this->getConfig()->getAll()["hit"]["blood"] == true){
+					$entity->getWorld()->addParticle($entity->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
+				}
                         }
 		}
 	}
