@@ -26,6 +26,7 @@ class KillDeathSound extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->checkUpdate();
+		$this->getServer()->getCommandMap()->register("/killdeathsound", new KillDeathSoundCommand($this));
 		self::$instance = $this;
 	}
 	
