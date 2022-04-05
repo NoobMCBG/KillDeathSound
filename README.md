@@ -1,5 +1,5 @@
 <div align="center">
-<h1>KillDeathSound | v2.0.0<h1>
+<h1>KillDeathSound | v3.0.0<h1>
 </div>
 <p align="center">
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.state/KillDeathSound"></a>
@@ -14,6 +14,8 @@
 ✔️ Can be set to work or not ✔️
 <br>
 ✔️ added sound when hitting or archery hits the enemy ✔️
+<br>
+✔️ Generates blood particles when killed, killed, punched, and hit by archery ✔️
 <br>
 ✔️ Can access to KillDeathSound ✔️
 </p>
