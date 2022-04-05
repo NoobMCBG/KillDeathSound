@@ -15,9 +15,9 @@
 <br>
 ✔️ added sound when hitting or archery hits the enemy ✔️
 <br>
-✔️ Generates blood particles when killed, killed, punched, and hit by archery ✔️
-<br>
 ✔️ Can access to KillDeathSound ✔️
+<br>
+✔️ Generates blood particles when killed, killed, punched, and hit by archery ✔️
 </p>
 
 ## Update
@@ -26,12 +26,16 @@
 | **Can be set to work or not** | **✔️**|
 | **added sound when hitting or archery hits the enemy** | **✔️**|
 | **Can access to KillDeathSound** | **✔️**|
+| **Generates blood particles when killed, killed, punched, and hit by archery** | **✔️**|
+
 
 <br>
 
 ## Features
 - When the player is killed and dies, the sound will work
-
+- Generates blood particles when killed, killed, punched, and hit by archery
+- added sound when hitting or archery hits the enemy
+  
 <br>
 
 ## Config
@@ -51,21 +55,29 @@
 # Player Death
 death:
   addsound: true
-  sound: "random.explode" # Sound name
+  blood: true
+  sound: # Sound name
+  - "random.explode"
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
 
 # Player Kills
 kill:
   addsound: true
-  sound: "random.levelup" # Sound name
+  blood: true
+  sound: # Sound name
+  - "random.levelup"
+  - "random.totem"
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
+  particle: # Particle death
   
 # Player Hit & Archery
 hit:
   addsound: true
-  sound: "random.orb" # Sound name
+  blood: true
+  sound: # Sound name
+  - "random.orb"
   volume: 1 # Volume sounds
   pitch: 1 # Pitch sounds
 ...
