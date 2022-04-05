@@ -7,8 +7,9 @@ namespace NoobMCBG\KillDeathSound;
 use pocketmine\player\Player;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use pocketmine\event\player\PlayerDeathEvent;
+use pocketmine\block\VanillaBlocks;
 use pocketmine\world\particle\BlockBreakParticle;
+use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
