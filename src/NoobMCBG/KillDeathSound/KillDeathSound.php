@@ -12,7 +12,6 @@ use pocketmine\world\particle\BlockBreakParticle;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
-use NoobMCBG\KillDeathSound\command\KillDeathSoundCommand;
 
 class KillDeathSound extends PluginBase implements Listener {
     
@@ -27,7 +26,6 @@ class KillDeathSound extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->checkUpdate();
-		$this->getServer()->getCommandMap()->register("/killdeathsound", new KillDeathSoundCommand($this));
 		self::$instance = $this;
 	}
 	
