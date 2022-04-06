@@ -1,5 +1,5 @@
 <div align="center">
-<h1>KillDeathSound | v3.0.0<h1>
+<h1>KillDeathSound | v3.0.1<h1>
 </div>
 <p align="center">
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.state/KillDeathSound"></a>
@@ -18,6 +18,8 @@
 ✔️ Can access to KillDeathSound ✔️
 <br>
 ✔️ Generates blood particles when killed, killed, punched, and hit by archery ✔️
+<br>
+✔️ It is possible for all entities to bleed when punching, arching, killing, dying ✔️
 </p>
 
 ## Update
@@ -27,6 +29,7 @@
 | **added sound when hitting or archery hits the enemy** | **✔️**|
 | **Can access to KillDeathSound** | **✔️**|
 | **Generates blood particles when killed, killed, punched, and hit by archery** | **✔️**|
+| **`It is possible for all entities to bleed when punching, arching, killing, dying`** | **✔️**|
 
 
 <br>
@@ -56,6 +59,7 @@
 death:
   addsound: true
   blood: true
+  blood-all-entity: true # Add Blood Particle to all entity hit, arching
   sound: # Sound name
   - "random.explode"
   volume: 1 # Volume sounds
@@ -65,6 +69,7 @@ death:
 kill:
   addsound: true
   blood: true
+  blood-all-entity: true # Add Blood Particle to all entity hit, arching
   sound: # Sound name
   - "random.levelup"
   - "random.totem"
@@ -76,6 +81,7 @@ kill:
 hit:
   addsound: true
   blood: true
+  blood-all-entity: true # Add Blood Particle to all entity hit, arching
   sound: # Sound name
   - "random.orb"
   volume: 1 # Volume sounds
@@ -93,7 +99,7 @@ $player = $event->getPlayer();
 $soundName = "random.explode";
 $volume = 1;
 $pitch = 1;
-KillDeathSound::getInstance()->PlaySound($player, $soundName, $volume, $pitch);
+KillDeathSound::getInstance()->playSound($player, $soundName, $volume, $pitch);
 ```
   
 <br>
