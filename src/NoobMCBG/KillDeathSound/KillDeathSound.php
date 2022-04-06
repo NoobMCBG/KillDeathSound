@@ -57,7 +57,7 @@ class KillDeathSound extends PluginBase implements Listener {
 			if($this->getConfig()->getAll()["death"]["blood-all-entity"] == true){
 				$player->getWorld()->addParticle($player->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 			}else{
-				if($entity instanceof Player){
+				if($player instanceof Player){
 					$player->getWorld()->addParticle($player->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 				}
 			}
@@ -78,7 +78,7 @@ class KillDeathSound extends PluginBase implements Listener {
 				if($this->getConfig()->getAll()["kill"]["blood-all-entity"] == true){
 					$damager->getWorld()->addParticle($damager->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 				}else{
-					if($entity instanceof Player){
+					if($damager instanceof Player){
 						$damager->getWorld()->addParticle($damager->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 					}
 				}
@@ -105,7 +105,7 @@ class KillDeathSound extends PluginBase implements Listener {
 			if($this->getConfig()->getAll()["hit"]["blood-all-entity"] == true){
 				$attacker->getWorld()->addParticle($attacker->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 			}else{
-				if($entity instanceof Player){
+				if($attacker instanceof Player){
 					$attacker->getWorld()->addParticle($attacker->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 				}
 			}
