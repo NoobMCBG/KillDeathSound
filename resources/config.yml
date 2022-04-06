@@ -14,6 +14,7 @@
 death:
   addsound: true
   blood: true
+  blood-all-entity: true # Add Blood Particle to all entity hit, arching
   sound: # Sound name
   - "random.explode"
   volume: 1 # Volume sounds
@@ -23,6 +24,7 @@ death:
 kill:
   addsound: true
   blood: true
+  blood-all-entity: true # Add Blood Particle to all entity hit, arching
   sound: # Sound name
   - "random.levelup"
   - "random.totem"
@@ -34,6 +36,7 @@ kill:
 hit:
   addsound: true
   blood: true
+  blood-all-entity: true # Add Blood Particle to all entity hit, arching
   sound: # Sound name
   - "random.orb"
   volume: 1 # Volume sounds
