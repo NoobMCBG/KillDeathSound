@@ -33,6 +33,7 @@
 | **Generates blood particles when killed, killed, punched, and hit by archery** | **✔️**|
 | **It is possible for all entities to bleed when punching, arching, killing, dying** | **✔️**|
 | **`Customizable Add Blood Particle to attacker`** | **✔️**|
+| **add `addBlood()` and `addBloodAt()` for Developer** | **✔️**|
 
 
 <br>
