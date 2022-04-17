@@ -110,7 +110,8 @@ KillDeathSound::getInstance()->playSound($player, $soundName, $volume, $pitch);
 ```php
 $position = $event->getPlayer()->getPosition();
 KillDeathSound::getInstance()->addBlood($position);
-  
+```  
+
 <br>
 
 ## Install
