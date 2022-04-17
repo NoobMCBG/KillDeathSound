@@ -7,7 +7,10 @@ namespace NoobMCBG\KillDeathSound;
 use pocketmine\player\Player;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
+use pocketmine\math\Vector3;
 use pocketmine\block\VanillaBlocks;
+use pocketmine\world\Position;
+use pocketmine\world\World;
 use pocketmine\world\particle\BlockBreakParticle;
 use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
@@ -149,5 +152,13 @@ class KillDeathSound extends PluginBase implements Listener {
 		$packet->volume = $volume;
 		$packet->pitch = $pitch;
 		$player->getNetworkSession()->sendDataPacket($packet);
+	}
+	
+	public function addBlood(Position $pos) : void {
+		$pos->getWorld()->addParticle($pos->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
+	}
+	
+	public function addBlood(float|int $x, float|int $y, float|int $z, World $world) : void {
+		$world->addParticle(new Vector3($x, $y, $z), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 	}
 }
