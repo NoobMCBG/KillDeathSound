@@ -103,10 +103,14 @@ class KillDeathSound extends PluginBase implements Listener {
 		}
 		if($this->getConfig()->getAll()["hit"]["blood"] == true){
 			if($this->getConfig()->getAll()["hit"]["blood-all-entity"] == true){
-				$attacker->getWorld()->addParticle($attacker->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
-			}else{
-				if($attacker instanceof Player){
+				if($this->getConfig()->getAll()["hit"]["blood-to-attacker"] !== true){
 					$attacker->getWorld()->addParticle($attacker->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
+				}
+			}else{
+				if($this->getConfig()->getAll()["hit"]["blood-to-attacker"] == true){
+					if($attacker instanceof Player){
+						$attacker->getWorld()->addParticle($attacker->getPosition()->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
+					}
 				}
 			}
 		}
