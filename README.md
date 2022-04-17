@@ -110,7 +110,15 @@ KillDeathSound::getInstance()->playSound($player, $soundName, $volume, $pitch);
 ```php
 $position = $event->getPlayer()->getPosition();
 KillDeathSound::getInstance()->addBlood($position);
-```  
+
+// or
+
+$x = $event->getPlayer()->getPosition()->getX();
+$y = $event->getPlayer()->getPosition()->getY();
+$z = $event->getPlayer()->getPosition()->getZ();
+$world = $event->getPlayer()->getPosition()->getWOrld();
+KillDeathSound::getInstance()->addBloodAt($x, $y, $z, $world);
+```
 
 <br>
 
