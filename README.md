@@ -117,7 +117,7 @@ KillDeathSound::getInstance()->addBlood($position);
 $x = $event->getPlayer()->getPosition()->getX();
 $y = $event->getPlayer()->getPosition()->getY();
 $z = $event->getPlayer()->getPosition()->getZ();
-$world = $event->getPlayer()->getPosition()->getWOrld();
+$world = $event->getPlayer()->getPosition()->getWorld();
 KillDeathSound::getInstance()->addBloodAt($x, $y, $z, $world);
 ```
 
