@@ -37,6 +37,7 @@ hit:
   addsound: true
   blood: true
   blood-all-entity: true # Add Blood Particle to all entity hit, arching
+  blood-to-attacker: false # Add Blood Particle to attacker
   sound: # Sound name
   - "random.orb"
   volume: 1 # Volume sounds
