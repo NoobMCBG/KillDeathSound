@@ -158,7 +158,7 @@ class KillDeathSound extends PluginBase implements Listener {
 		$pos->getWorld()->addParticle($pos->asVector3(), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 	}
 	
-	public function addBlood(float|int $x, float|int $y, float|int $z, World $world) : void {
+	public function addBloodAt(float|int $x, float|int $y, float|int $z, World $world) : void {
 		$world->addParticle(new Vector3($x, $y, $z), new BlockBreakParticle(VanillaBlocks::REDSTONE()));
 	}
 }
