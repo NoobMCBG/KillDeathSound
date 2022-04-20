@@ -45,7 +45,7 @@ class KillDeathSound extends PluginBase implements Listener {
         * @return void
 	*/
 	protected function checkConfigUpdate(): void{
-        $updateconfig = false;
+            $updateconfig = false;
 
         if(!$this->getConfig()->exists("config-version")){
             $updateconfig = true;
