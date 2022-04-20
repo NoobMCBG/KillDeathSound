@@ -45,21 +45,21 @@ class KillDeathSound extends PluginBase implements Listener {
         * @return void
 	*/
 	protected function checkConfigUpdate(): void{
-            $updateconfig = false;
+        	$updateconfig = false;
 
-        if(!$this->getConfig()->exists("config-version")){
-            $updateconfig = true;
-        }
+        	if(!$this->getConfig()->exists("config-version")){
+            		$updateconfig = true;
+        	}
 
-        if($this->getConfig()->get("config-version") !== $this->configversion){
-            $updateconfig = true;
-        }
+        	if($this->getConfig()->get("config-version") !== $this->configversion){
+            		$updateconfig = true;
+        	}
 
-        if($updateconfig){
-            @unlink($this->getDataFolder()."config.yml");
-            $this->saveDefaultConfig();
-        }
-    }
+       		if($updateconfig){
+            		@unlink($this->getDataFolder()."config.yml");
+            		$this->saveDefaultConfig();
+        	}
+    	}
     
         /**
         * @param PlayerDeathEvent $event
