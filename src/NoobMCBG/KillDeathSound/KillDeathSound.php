@@ -17,6 +17,8 @@ use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
 class KillDeathSound extends PluginBase implements Listener {
+	
+	protected $configversion = "3.0.2";
     
         /** @var KillDeathSound */
 	public static $instance;
@@ -29,6 +31,7 @@ class KillDeathSound extends PluginBase implements Listener {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->checkUpdate();
+		$this->checkConfigUpdate();
 		self::$instance = $this;
 	}
 	
@@ -38,6 +41,25 @@ class KillDeathSound extends PluginBase implements Listener {
 	public function checkUpdate(bool $isRetry = false): void {
             	$this->getServer()->getAsyncPool()->submitTask(new CheckUpdateTask($this->getDescription()->getName(), $this->getDescription()->getVersion()));
         }
+	/** 
+        * @return void
+	*/
+	protected function checkConfigUpdate(): void{
+        	$updateconfig = false;
+
+        	if(!$this->getConfig()->exists("config-version")){
+            		$updateconfig = true;
+        	}
+
+        	if($this->getConfig()->get("config-version") !== $this->configversion){
+            		$updateconfig = true;
+        	}
+
+       		if($updateconfig){
+            		@unlink($this->getDataFolder()."config.yml");
+            		$this->saveDefaultConfig();
+        	}
+    	}
     
         /**
         * @param PlayerDeathEvent $event

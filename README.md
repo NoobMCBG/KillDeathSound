@@ -37,15 +37,6 @@
 
 <br>
 
-## How To Fix
->- Usually when you download a new update, when using the plugin, the game will crash.
->- Here's how to fix that:
->- Step 1: Go to `plugin_data` file
->- Step 2: Delete the file named `KillDeathSound`
->- Step 3: Restart the server and experience the plugin
-
-<br>
-
 ## Features
 >- When the player is killed and dies, the sound will work
 >- Generates blood particles when killed, killed, punched, and hit by archery
