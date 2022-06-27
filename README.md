@@ -7,6 +7,9 @@
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.dl.total/KillDeathSound"></a>
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.dl/KillDeathSound"></a>
 <br>
+
+<img src="https://github.com/NoobMCBG/KillDeathSound/blob/main/rainbow.gif">
+<br>
 ✔️ When the player is killed and dies, the sound will work ✔️
 <br>
 <img src="https://github.com/NoobMCBG/KillDeathSound/blob/main/icon.png"/>
@@ -21,7 +24,10 @@
 <br>
 ✔️ It is possible for all entities to bleed when punching, arching, killing, dying ✔️
 <br>
-✔️ Customizable Add Blood Particle to attacker ✔️
+✔️ Customizable Add Blood Particle to attacker ✔️ 
+  <br>
+
+<img src="https://github.com/NoobMCBG/KillDeathSound/blob/main/rainbow.gif">
 </p>
 
 ## Update
