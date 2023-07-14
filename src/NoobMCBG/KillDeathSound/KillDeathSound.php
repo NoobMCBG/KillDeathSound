@@ -165,7 +165,7 @@ class KillDeathSound extends PluginBase implements Listener {
         * @param float $volume = 0
         * @param float $pitch = 0
         */
-	public function playSound(Player $player, string $soundName, float $volume = 0, float $pitch = 0) : void {
+	public function playSound(Player $player, string $soundName, float $volume = 1000, float $pitch = 1000) : void {
 		$packet = new PlaySoundPacket();
 		$packet->soundName = $soundName;
 		$packet->x = $player->getPosition()->getX();
