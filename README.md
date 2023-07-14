@@ -1,5 +1,5 @@
 <div align="center">
-<h1>KillDeathSound | v3.0.2<h1>
+<h1>KillDeathSound | v3.0.3<h1>
 </div>
 <p align="center">
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.state/KillDeathSound"></a>
@@ -40,7 +40,8 @@
 | **It is possible for all entities to bleed when punching, arching, killing, dying** | **✔️**|
 | **Customizable Add Blood Particle to attacker** | **✔️**|
 | **add `addBlood()` and `addBloodAt()` for Developer** | **✔️**|
-| **`Update config version`** | **✔️**|
+| **Update config version** | **✔️**|
+| **`Update to PocketMine-MP 5.0.0`** | **✔️** |
 
 <br>
 
@@ -65,7 +66,7 @@
 #
 # You can see the list of sound effects at this link: "https://www.digminecraft.com/lists/sound_list_pe.php"
 # Don't Change It!
-config-version: 3.0.2
+config-version: 3.0.3
 # Player Death
 death:
   addsound: true
@@ -85,8 +86,7 @@ kill:
   - "random.levelup"
   - "random.totem"
   volume: 1 # Volume sounds
-  pitch: 1 # Pitch sounds
-  particle: # Particle death
+  pitch: 1 # Pitch sound
   
 # Player Hit & Archery
 hit:
