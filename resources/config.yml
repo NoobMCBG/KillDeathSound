@@ -10,7 +10,7 @@
 #
 # You can see the list of sound effects at this link: "https://www.digminecraft.com/lists/sound_list_pe.php"
 # Don't Change It!
-config-version: 3.0.2
+config-version: 3.0.3
 # Player Death
 death:
   addsound: true
@@ -18,8 +18,8 @@ death:
   blood-all-entity: true # Add Blood Particle to all entity hit, arching
   sound: # Sound name
   - "random.explode"
-  volume: 1 # Volume sounds
-  pitch: 1 # Pitch sounds
+  volume: 1000 # Volume sounds
+  pitch: 1000 # Pitch sounds
 
 # Player Kills
 kill:
@@ -29,9 +29,8 @@ kill:
   sound: # Sound name
   - "random.levelup"
   - "random.totem"
-  volume: 1 # Volume sounds
-  pitch: 1 # Pitch sounds
-  particle: # Particle death
+  volume: 1000 # Volume sounds
+  pitch: 1000 # Pitch sounds
   
 # Player Hit & Archery
 hit:
