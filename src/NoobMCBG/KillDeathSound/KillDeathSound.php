@@ -18,7 +18,7 @@ use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 
 class KillDeathSound extends PluginBase implements Listener {
 	
-	protected $configversion = "3.0.2";
+	protected $configversion = "3.0.3";
     
         /** @var KillDeathSound */
 	public static $instance;
