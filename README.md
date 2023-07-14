@@ -1,5 +1,5 @@
 <div align="center">
-<h1>KillDeathSound | v3.0.3<h1>
+<h1>KillDeathSound | v3.0.4<h1>
 </div>
 <p align="center">
 <a href="https://poggit.pmmp.io/p/KillDeathSound"><img src="https://poggit.pmmp.io/shield.state/KillDeathSound"></a>
