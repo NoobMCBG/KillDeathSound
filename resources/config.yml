@@ -10,7 +10,7 @@
 #
 # You can see the list of sound effects at this link: "https://www.digminecraft.com/lists/sound_list_pe.php"
 # Don't Change It!
-config-version: 3.0.3
+config-version: 3.0.4
 # Player Death
 death:
   addsound: true
