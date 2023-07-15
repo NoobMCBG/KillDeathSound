@@ -39,7 +39,7 @@
 | **Generates blood particles when killed, killed, punched, and hit by archery** | **✔️**|
 | **It is possible for all entities to bleed when punching, arching, killing, dying** | **✔️**|
 | **Customizable Add Blood Particle to attacker** | **✔️**|
-| **add `addBlood()` and `addBloodAt()` for Developer** | **✔️**|
+| **add function addBlood() and addBloodAt() for Developer** | **✔️**|
 | **Update config version** | **✔️**|
 | **`Update to PocketMine-MP 5.0.0`** | **✔️** |
 
